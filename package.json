@@ -2,19 +2,19 @@
   "dependencies": {
     "@hookform/resolvers": "3.9.1",
     "@rainbow-me/rainbowkit": "2.2.0",
-    "@tanstack/react-query": "5.61.4",
+    "@tanstack/react-query": "5.62.0",
     "encoding": "0.1.13",
     "next": "15.0.3",
     "pino-pretty": "10.3.1",
     "react": "19.0.0-rc-fb9a90fa48-20240614",
     "react-dom": "19.0.0-rc-fb9a90fa48-20240614",
     "react-hook-form": "7.53.2",
-    "viem": "2.21.51",
-    "wagmi": "2.13.0",
+    "viem": "2.21.53",
+    "wagmi": "2.13.2",
     "zod": "3.23.8"
   },
   "devDependencies": {
-    "@types/node": "22.10.0",
+    "@types/node": "22.10.1",
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
     "eslint": "8.57.1",
