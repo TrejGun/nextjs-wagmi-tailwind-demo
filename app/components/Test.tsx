@@ -6,9 +6,9 @@ import { zeroAddress } from "viem";
 import { useWriteContract } from "wagmi";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { getAddresses } from "@/app/utils";
-import { Loader } from "@/app/components/Loader";
-import contract from "@/app/contracts/ERC20Ownable.json";
+import { getAddresses } from "../utils";
+import { Loader } from "./Loader";
+import contract from "../contracts/ERC20Ownable.json";
 
 export const TransferSchema = z.object({
   address: z.string(),
@@ -51,7 +51,7 @@ export const TestComponent = () => {
         name="address"
         control={control}
         render={({ field: { onChange, value, name } }) => (
-          <select value={value} name={name} onChange={onChange}>
+          <select value={value} name={name} onChange={onChange} className="border border-slate-300">
             {data?.map(item => (
               <option key={item.address} value={item.address}>
                 {item.name}
@@ -64,11 +64,11 @@ export const TestComponent = () => {
         control={control}
         name="amount"
         render={({ field: { onChange, value, name } }) => (
-          <input type="number" value={value} name={name} onChange={onChange} />
+          <input type="number" value={value} name={name} onChange={onChange} className="border border-slate-300" />
         )}
       />
 
-      <button type="submit" disabled={isPending}>
+      <button type="submit" disabled={isPending} className="border border-slate-300">
         Submit
       </button>
     </form>

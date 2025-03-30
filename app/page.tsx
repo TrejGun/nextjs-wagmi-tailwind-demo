@@ -1,7 +1,7 @@
 import { HydrationBoundary, QueryClient, dehydrate } from "@tanstack/react-query";
 
-import { TestComponent } from "@/app/components/Test";
-import { getAddresses } from "@/app/utils";
+import { TestComponent } from "./components/Test";
+import { getAddresses } from "./utils";
 
 export default async function Home() {
   const addresses = await getAddresses();
