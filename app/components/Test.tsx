@@ -6,6 +6,7 @@ import { zeroAddress } from "viem";
 import { useWriteContract } from "wagmi";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+
 import { getAddresses } from "../utils";
 import { Loader } from "./Loader";
 import contract from "../contracts/ERC20Ownable.json";
@@ -32,7 +33,7 @@ export const TestComponent = () => {
 
   const { writeContract } = useWriteContract();
 
-  async function onSubmit(data: typeof TransferSchema._type) {
+  function onSubmit(data: typeof TransferSchema._type) {
     writeContract({
       abi: contract.abi,
       address: "0xdac17f958d2ee523a2206206994597c13d831ec7", // usdt
